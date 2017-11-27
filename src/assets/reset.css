@@ -1,0 +1,22 @@
+*::before,*::after{box-sizing:border-box}
+html,body,div,span,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,section, article, aside, header, footer, nav, dialog, figure,menu,hgroup,iframe{font-family: "Microsoft YaHei"; margin:0; padding:0; border:0; }
+body{font-size:3.7vw;max-width:1920px; margin:0 auto; background:#fff; font-family:"Lantinghei SC", "Open Sans", Arial, "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", "STHeiti", "WenQuanYi Micro Hei", SimSun, sans-serif; font-size:16px; line-height:24px; color:#333; overflow-x:hidden;}
+input,textarea,button{ resize:none; font-family:"Microsoft YaHei"; background: #fff; border: 0;  }
+input::-webkit-input-placeholder{color: #666; text-indent:10px;}
+textarea::-webkit-input-placeholder{text-indent:10px;}
+-moz-placeholder{color: #907c84; text-indent:10px;}
+img{ border:none; vertical-align:middle; }
+ul,li{ list-style:none;}
+a{ text-decoration:none; color:#333; outline:none; }
+a:hover{text-decoration:none;}
+input:focus,textarea:focus{ outline:none; }
+span,h1,h2,h3,h4,h5{ font-family:"Microsoft YaHei";}
+.oh{overflow:hidden;}
+.fr{float:right;}
+.fl{float:left;}
+.clearfix::after{
+    content:'';
+    display: block;
+    clear: both;
+    zoom: 1;
+  }
