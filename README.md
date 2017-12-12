@@ -2,6 +2,8 @@
 
 > A Vue.js project
 
+20171212  重构sidebar.vue
+
 ## Build Setup
 
 ``` bash

@@ -10,22 +10,10 @@
      <ul class="panes fl">
         <!-- <li v-for="i in [0,1,2,3,4,5]" v-bind:class="{active: currentTab ===i}">tab {{i+1}}</li> -->
         <li v-bind:class="{active: currentTab ===0}">
-              <Editorform v-bind:profile="profile"></Editorform>
+              <Editorprofile v-bind:profile="profile"></Editorprofile>
         </li>
         <li v-bind:class="{active: currentTab ===1}">
-            <h2>工作经历</h2>
-              <el-form class="sidebar-form">
-                    <div class="excel" v-for="(work,index) in workHistory">            
-                          <el-form-item  label="公司" >
-                              <el-input v-model="work.company"></el-input>
-                          </el-form-item>
-                          <el-form-item  label="工作内容">
-                              <el-input v-model="work.content"></el-input>
-                           </el-form-item>     
-                           <i class="el-icon-circle-close" v-on:click="removeWorkHistory(index)"></i>     
-                    </div>
-                    <el-button type="primary" v-on:click="addWorkHistory()">继续添加</el-button>
-              </el-form>
+             <Editorwork v-bind:workHistory="workHistory"></Editorwork>
         </li>
         <li v-bind:class="{active: currentTab ===2}">2</li>
         <li v-bind:class="{active: currentTab ===3}">3</li>
@@ -37,9 +25,10 @@
 
 
 <script>
-import Editorform from "./Editorform";
+import Editorprofile from "./Editorprofile";
+import Editorwork from "./Editorwork"
 export default {
-  components: { Editorform },
+  components: { Editorprofile,Editorwork },
   data() {
     return {
       currentTab: 0,
@@ -64,17 +53,6 @@ export default {
         }
       ]
     };
-  },
-  methods: {
-    addWorkHistory() {
-      this.workHistory.push({
-        company: "",
-        content: ""
-      });
-    },
-    removeWorkHistory(index) {
-      this.workHistory.splice(index, 1);
-    }
   },
   created() {
     //  console.log(this.profile)
